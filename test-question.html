@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Questions</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    />
+    <script src="script.js"></script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+            font-size: inherit;
+        }
+
+        /* optional: ensure body uses full height like your template */
+        body { min-height: 100vh; }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#1c0d10] dark:text-[#fcf8f9]">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header (same as first template) -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 dark:border-primary/30 px-6 sm:px-10 lg:px-20 py-3 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-50"
+            >
+                <div class="flex items-center gap-4">
+                    <div class="size-6 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold">Multimedia Systems</h2>
+                </div>
+                <nav class="flex flex-1 justify-end">
+                    <div class="flex items-center gap-9">
+                        <a class="text-sm font-medium leading-normal text-black hover:text-primary dark:text-white dark:hover:text-primary" href="./Multimedia-project.html">Home</a>
+                        <a class="text-sm font-medium leading-normal text-black hover:text-primary dark:text-white dark:hover:text-primary" href="#">Lectures</a>
+                        <a class="text-sm font-medium leading-normal text-black hover:text-primary dark:text-white dark:hover:text-primary" href="./tests.html">Tests and Assignments</a>
+                        <a class="text-sm font-medium leading-normal text-black hover:text-primary dark:text-white dark:hover:text-primary" href="#">About Us</a>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Main Content (mirrors first template layout & classes) -->
+            <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                    <!-- Left Section (content area; like the template) -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="flex flex-wrap justify-between gap-4 items-start">
+                            <div class="flex min-w-72 flex-col gap-2">
+                                <h1 class="text-4xl font-black">Test Questions</h1>
+                                <p class="text-base text-[#9c4957] dark:text-[#f4e7e9]/60">
+                                    View test paper images below. Duplicate the card block to add more pages.
+                                </p>
+                            </div>
+
+                            <!-- small action group (keeps the same children classes) -->
+                            <div class="flex items-center gap-3">
+                                <button
+                                    class="flex h-9 items-center rounded-lg bg-primary/20 dark:bg-primary/30 px-4 text-primary text-sm font-medium"
+                                    id="Back-to-tests"
+                                >
+                                    <span class="material-symbols-outlined">arrow_back</span>
+                                    Back
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Image cards — styled like the test/assignment cards in your template -->
+                        <div class="space-y-6">
+
+                            <!-- card for first PNG -->
+                            <div class="bg-white dark:bg-black/20 p-6 rounded-xl border border-primary/10 dark:border-primary/20">
+                                <div class="flex flex-col md:flex-row items-stretch justify-between gap-6">
+                                    <div class="flex flex-col gap-4 flex-[2_2_0px]">
+                                        <div class="flex flex-col gap-1">
+                                            <p class="text-lg font-bold">Tests questions</p>
+                                            <p class="text-sm text-[#6b6b6b] dark:text-[#d6d6d6]">PNG / Scanned paper</p>
+                                        </div>
+
+                                        <div class="flex gap-3">
+                                            <button
+                                                class="flex min-w-[84px] h-9 items-center justify-center gap-2 flex-row-reverse rounded-lg px-4 pr-2 bg-primary text-white text-sm font-medium"
+                                                id="Download-1"
+                                            >
+                                                <span class="material-symbols-outlined">download</span>
+                                                Download
+                                            </button>
+
+                                            <button
+                                                class="flex min-w-[84px] h-9 items-center justify-center gap-2 flex-row-reverse rounded-lg px-4 pr-2 bg-[#f4e7e9] dark:bg-primary/20 text-[#1c0d10] dark:text-[#fcf8f9] text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30"
+                                                id="Open-1"
+                                            >
+                                                <span class="material-symbols-outlined">open_in_full</span>
+                                                Open
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- image preview area (keeps same bg-cover aspect-video approach) -->
+                                    <div
+                                        class="w-full md:w-auto bg-center bg-cover aspect-video rounded-lg flex-1"
+                                        data-alt="Test paper preview"
+                                        style='background-image: url("Test questions.PNG");'
+                                    ></div>
+                                </div>
+                            </div>
+
+                            <!-- if you only have one PNG, remove the second block above -->
+
+                            <!-- optional: view answers / comments area -->
+                            <button
+                                class="flex min-w-[84px] h-9 items-center justify-center gap-2 flex-row-reverse rounded-lg px-4 pr-2 bg-[#f4e7e9] dark:bg-primary/20 text-[#1c0d10] dark:text-[#fcf8f9] text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30"
+                                onclick="Viewanswers()"
+                            >
+                                <span class="truncate">View Answers</span>
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Right Sidebar -->
+                        <aside class="space-y-8 lg:sticky top-28 h-fit">
+                            <!-- Upcoming deadlines -->
+                            <div class="bg-white dark:bg-black/20 p-6 rounded-xl border border-primary/10 dark:border-primary/20 space-y-4">
+                                <h3 class="text-lg font-bold">Upcoming Deadlines</h3>
+
+                                <ul class="space-y-4">
+                                    <!-- Examination -->
+                                    <li class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 size-10 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-primary">quiz</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-sm">Examination</p>
+                                            <p class="text-xs text-yellow-600 dark:text-yellow-400" id="examDue"></p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Project Submission -->
+                                    <li class="flex items-start gap-4">
+                                        <div class="flex-shrink-0 size-10 bg-primary/10 dark:bg-primary/20 rounded-lg flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-primary">assignment</span>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-sm">Project Submission</p>
+                                            <p class="text-xs text-yellow-600 dark:text-yellow-400" id="projectDue"></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    <div id="view-answers-to-tests-questions"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JS handlers - same pattern as template; you can replace hrefs or implement download logic -->
+    <script>
+        document.getElementById("Back-to-tests")?.addEventListener("click", ()=> {
+            window.location.href = "tests.html";
+        });
+
+        document.getElementById("Open-1")?.addEventListener("click", ()=> {
+            // open full PNG in a new tab (change path if needed)
+            window.open("Test questions.PNG", "_blank");
+        });
+        document.getElementById("Download-1")?.addEventListener("click", ()=> {
+            const a = document.createElement('a');
+            a.href = "Test questions.PNG";
+            a.download = "Test-Question-1.PNG";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        });
+        function Viewanswers() {
+            window.location.href = "viewTestanswers.html";
+        }
+// Set your real deadlines here:
+    const examDate = new Date("2026-01-15");
+    const projectDate = new Date("2025-12-12");
+
+    const updateDue = (date) => {
+        const today = new Date();
+        const diff = Math.ceil((date - today) / (1000 * 60 * 60 * 24));
+        return diff > 0 ? `Due in ${diff} days` : "Deadline passed";
+    };
+
+    document.getElementById("examDue").textContent = updateDue(examDate);
+    document.getElementById("projectDue").textContent = updateDue(projectDate);
+    </script>
+    <a href="Multimedia-answers-to-tests-questions.docx"></a>
+</body>
+</html>
